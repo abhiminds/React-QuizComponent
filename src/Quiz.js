@@ -4,14 +4,14 @@ class Quiz extends Component{
     constructor(props){
         super(props)
         this.state = {
-            quiz_position: quizData
+            quiz_position: 1
         }
     }
     render(){
-        console.log(this.state.quiz_position)
+        
         return(
             <div>
-                <div className="QuizQuestion">1</div>
+                <div className="QuizQuestion">{this.state.quiz_position}</div>
             </div>
         )
     }
