@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import QuizQuestion from './QuizQuestion'
+import QuizEnd from './QuizEnd'
 let quizData = require('./quiz_data.json')
 class Quiz extends Component{
     constructor(props){
@@ -9,12 +10,15 @@ class Quiz extends Component{
         }
     }
     render(){
-    console.log(this.state.quiz_position)
+        const isQuizEnd = false;
+        console.log(isQuizEnd)
         return(
             <div>
-                <QuizQuestion 
+                {isQuizEnd ? <QuizEnd /> : <QuizQuestion 
                 className="QuizQuestion" 
-                quiz_question= {this.state.quiz_position} />
+                quiz_question= {this.state.quiz_position} />}
+                
+                
                 
             </div>
         )
